@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaya</title>
+   
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Manrope:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"><body>
+  <div class="modal" id="modal-registration">
+        <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-close">
+                <img src="images/close.svg"/>
+              </div>
+            </div>
+            <div class="modal-body">
+            <div class="modal-title">Регистрация</div>
+            <p>Уже есть аккаунт? <span class="modal-change" id="modalLogin">Войти</span></p>
+            <form class="modal__form">
+                    <input class="form__input" type="text" placeholder="Имя*"/>
+                    <input class="form__input"  type="email"   placeholder="E-mail*"/>
+                    <input class="form__input phone-input" type="text" placeholder="Телефон"/>
+                    <div class="input-password">
+                        <input class="form__input"  type="password" placeholder="Пароль"/>
+                        <img class="input-visible" src="images/visible.svg"/>
+                        <img class="input-unvisible" src="images/unvisible.svg"/>
+                    </div>
+                    
+                   
+                    <div class="checkboxes">
+                        <input type="checkbox" id="checkbox"/>
+                        <label for="checkbox">
+                            <div class="checkbox-mark">
+                                <img src="images/modal-tick.svg"/>
+                            </div>
+                            Согласие на обработку персональных данных
+                           
+                        </label>
+                   </div>
+                   <button class="form__btn" type="submit">Регистрация</button>
+            </form>
+            </div>
+          </div>
+    </div>
+    <div class="modal" id="modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-close">
+                <img src="images/close.svg"/>
+              </div>
+            </div>
+            <div class="modal-body">
+            <div class="modal-title">Вход</div>
+            <p>Уже есть аккаунт? <span class="modal-change" id="modalRegistration">Регистрация</span></p>
+            <form class="modal__form">
+                    <input class="form__input"  type="email"   placeholder="E-mail"/>
+                    <div class="input-password">
+                        <input class="form__input"  type="password" placeholder="Пароль"/>
+                        <img src="images/visible.svg"/>
+                    </div>
+                   <button class="form__btn" type="submit">Вход</button>
+            </form>
+            <div class="modal-change modal-reset" id="modalReset">Не помните пароль?</div>
+            </div>
+          </div>
+    </div>
+    <div class="modal" id="modal-reset">
+        <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-close">
+                <img src="images/close.svg"/>
+              </div>
+            </div>
+            <div class="modal-body">
+            <div class="modal-title">Восстановление пароля</div>
+            <p>Пожалуйста, введите email, указанный вами при регистрации. Вы получите ссылку для восстановления пароля</p>
+            <form class="modal__form">
+                    <input class="form__input"  type="email"   placeholder="E-mail"/>
+                    
+                   <button class="form__btn" type="submit">Сбросить пароль</button>
+            </form>
+            </div>
+          </div>
+    </div>
+    <header class="header hAuto">
+      
+        <div class="header__top">
+            <div class="header__inner">
+                <div class="header__top-nav">
+                    <div class="header__hamburger">
+                        <span>
+                            <img src="images/main/hamburger.svg"/>
+                        </span>
+                    </div>
+                    <a href="/" class="header__logo">
+                        <img src="images/main/logo.svg"/>
+                    </a>  
+                    <div class="header__top-right">
+                        <a href="#" class="header__search">
+                            <img src="images/main/search.svg"/>
+                        </a>
+                        <a href="#" class="header__user header__user-mb">
+                            <img src="images/main/user.svg"/>
+                        </a>
+                        <a href="#">
+                            <img src="images/main/shop.svg"/>
+                            <span>0</span>
+                        </a>
+                        <a href="#" class="header__user header__user-dk">
+                            <img src="images/main/user.svg"/>
+                        </a>
+                    </div>
+                </div>  
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#">Украшения</a>
+                        </li>
+                        <li>
+                            <a href="#">аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="#">Коллекции</a>
+                        </li>
+                        <li>
+                            <a href="#">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#">Оплата и доставка</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header-mobile-nav">
+            <div class="header-mobile-nav-top">
+                <img src="images/main/header-close.svg"/>
+            </div>
+            <div class="header-mobile-nav-body">
+                <ul>
+                   <li><a href="#">Украшения</a></li>
+                   <li><a href="#">аксессуары для волос</a></li>
+                   <li><a href="#">Коллекции</a></li>
+                   <li><a href="#">О компании</a></li>
+                   <li><a href="#">Контакты</a></li>
+                   <li><a href="#">Оплата и доставка</a></li>
+                </ul>
+            </div>
+            <div class="header-mobile-nav-footer">
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/main/favorites.svg"/><span>Избранное</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/main/search-Bold.svg"/><span>Поиск</span></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+          
+       
+      
+    </header>
+
+    <main class="main">
+        <div class="crumbs">
+            <ul>
+                <li>
+                    <a href="#" class="crumbs__home"><img  src="images/home.svg"/></a>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    Корзина
+                </li>
+            </ul>
+        </div>  
+       <section class="cart">
+       
+            <div class="cart__title">Корзина</div>
+            <div class="cart_wrap">
+                <div class="cart_block">
+                    <div class="cart_main_wrap">
+                        <div class="cart_img"><img src="images/cart-img.svg" alt=""></div>
+                        <div class="cart_title_wrap">
+                            <div class="cart_title">Комплект женских украшений подвеска и серьги</div>
+                            <div class="cart_title2">22072109</div>
+                        </div>
+
+                        <div class="cart_item_wrap">
+                            <div class="cart-example"><img src="images/cart-example.svg" alt=""></div>
+                            <div class="cart_item_title">комплект</div>
+                        </div>
+                        <div class="cart_summa_wrap">
+                            <div class="cart_summa">1 000 ₽</div>
+                            <div class="cart_summa2">1 300 ₽</div>
+                        </div>
+                        <button class="cart_delete"><img src="images/cart-delete.svg" alt=""></button>
+                    </div>
+
+                    <div class="cart_mobile_summa">
+                        <div class="cart_item_wrap">
+                            <div class="cart-example"><img src="images/cart-example.svg" alt=""></div>
+                            <div class="cart_item_title">комплект</div>
+                        </div>
+                        <div class="cart_summa_wrap">
+                            <div class="cart_summa">1 000 ₽</div>
+                            <div class="cart_summa2">1 300 ₽</div>
+                        </div>
+                    </div>
+
+
+                    <div class="cart_main_wrap">
+                        <div class="cart_img"><img src="images/cart-img2.svg" alt=""></div>
+                        <div class="cart_title_wrap">
+                            <div class="cart_title">Комплект женских украшений подвеска и серьги</div>
+                            <div class="cart_title2">22072109</div>
+                        </div>
+
+                        <div class="cart_item_wrap">
+                            <div class="cart-example"><img src="images/cart-example.svg" alt=""></div>
+                            <div class="cart_item_title">комплект</div>
+                        </div>
+                        <div class="cart_summa_wrap">
+                            <div class="cart_summa">1 000 ₽</div>
+                            <div class="cart_summa2">1 300 ₽</div>
+                        </div>
+                        <button class="cart_delete"><img src="images/cart-delete.svg" alt=""></button>
+                    </div>
+
+                    <div class="cart_mobile_summa">
+                        <div class="cart_item_wrap">
+                            <div class="cart-example"><img src="images/cart-example.svg" alt=""></div>
+                            <div class="cart_item_title">комплект</div>
+                        </div>
+                        <div class="cart_summa_wrap">
+                            <div class="cart_summa">1 000 ₽</div>
+                            <div class="cart_summa2">1 300 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart_block2">
+                    <div class="cart_left_wrap">
+                        <div class="ct_left_title_wrap">
+                            <div class="ct_left_title">
+                                Тип цены
+                            </div> 
+                            <div class="ct_left_title">
+                                Розничная
+                            </div>    
+                        </div>
+
+                        <div class="ct_left_title_wrap">
+                            <div class="ct_left_title">
+                                4 товара на сумму
+                            </div> 
+                            <div class="ct_left_title">
+                                5 200 ₽
+                            </div>    
+                        </div>
+
+
+                        <div class="ct_left_title_wrap">
+                            <div class="ct_left_title">
+                                Доставка
+                            </div> 
+                            <div class="ct_left_title">
+                                -
+                            </div>    
+                        </div>
+
+                        <div class="ct_left_title_wrap">
+                            <div class="ct_left_title">
+                                Скидка
+                            </div> 
+                            <div class="ct_left_title">
+                                -1 200 ₽
+                            </div>    
+                        </div>
+
+                        <div class="cart_price_wrap">
+                            <div class="cart_price">Итого</div>
+                            <div class="cart_price">4 000 ₽</div>
+                        </div>
+                        <a href="#" class="btn_cart">
+                            Оформить заказ
+                        </a>
+
+                        <div class="left-sidebar__balance-functions__checkbox-item">
+                            <input tabindex="2" type="checkbox" id="checkbox-start"> <label tabindex="2" for="checkbox-start"><span>  Согласие на обработку персональных данных</span></label>
+                          </div>
+
+                        <div class="choose_cart_wrap">
+                            <span>Доберите товаров на сумму 3 450 ₽ и получите <br> оптовую цену</span>
+                            <a href="#" class="cart_opt_title">
+                                Пересчитать по оптовым ценам
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart_delivery">
+                        Бесплатная доставка при заказе <br> от 10 000 ₽
+                    </div>
+                </div>
+            </div>
+          
+       </section
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer__logo">
+                    <img src="images/main/footer-logo.svg"/>
+                </div>
+                <div class="footer__columns">
+                    <div class="footer__column-information">
+                        <div class="footer__column-title">Информация</div>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                        </ul>
+                        <div class="footer-accordion">
+                            <div class="footer-accordion__top">
+                                <div class="footer-accordion__title">Информация</div>
+                                <div class="footer-accordion__icon"><img src="images/main/plus.svg"/></div>
+                            </div>
+                            <div class="footer-accordion__content">
+                                <ul>
+                                    <li>
+                                        <a href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Оплата и доставка</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="footer__column-question">
+                        <div class="footer__column-question-title">
+                            Нужна <br> консультация?
+                        </div>
+                        <a href="#" class="footer__column-more">
+                            Задать вопрос
+                        
+                        </a>
+
+
+                    </div>
+                    <div class="footer__column-catalog">
+                        <div class="footer-accordion">
+                            <div class="footer-accordion__top">
+                                <div class="footer-accordion__title">Каталог</div>
+                                <div class="footer-accordion__icon"><img src="images/main/plus.svg"/></div>
+                            </div>
+                            <div class="footer-accordion__content">
+                                <ul>
+                                    <li>
+                                        <a href="#">Украшения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аксессуары для волос</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Коллекции</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__column-title">Каталог</div>
+                    <ul class="footer-menu">
+                        <li>
+                            <a href="#">Украшения</a>
+                        </li>
+                        <li>
+                            <a href="#">Аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="#">Коллекции</a>
+                        </li>
+                    </ul></div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </footer>
+
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__bottom-item">
+                <a href="#">Политика обработки персональных данных
+                </a>
+            </div>
+            <div class="footer__bottom-item2">© 2022. Интернет-магазин бижутерии Novaya Ya. Все права защищены</div>
+        </div>    
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
